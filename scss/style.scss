@@ -1,0 +1,238 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+/* ---------------------------------------------- */
+.container {
+  max-width: 1332px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+body {
+  font-family: "Roboto";
+  font-style: normal;
+}
+
+$btn: #0c4a34;
+/* ---------------------------------------------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 21px;
+  }
+
+  &__logo {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 21px;
+    color: #fff;
+  }
+  &__nav-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    margin-right: 14px;
+    padding: 9px 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+  }
+  &__menu {
+    margin-right: 50px;
+  }
+  &__link {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    padding: 9px 16px;
+    background-color: $btn;
+    border-radius: 5px;
+    color: #fff;
+  }
+  &__burger {
+    position: relative;
+    display: none;
+    height: 30px;
+    width: 40px;
+
+    &_line {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 40px;
+      height: 4px;
+      background-color: #fff;
+      transition: all 0.2s;
+      z-index: 50000;
+    }
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #fff;
+      /* transition: all 0.3s; */
+    }
+    &::after {
+      top: 0;
+    }
+    &::before {
+      bottom: 0;
+    }
+
+    &:hover {
+      transform: scale3d(1.1, 1.1);
+    }
+  }
+}
+.burger__active .header__burger_line {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+.burger__active::after {
+  transform: rotate(45deg);
+  top: 50%;
+}
+.burger__active::before {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 39px;
+    min-width: 100px;
+    transition: all 0.3s;
+
+    &:not(:last-child) {
+      margin-right: 29px;
+    }
+    &:hover .menu__sub-ist {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    color: #fff;
+  }
+
+  &__sub-ist {
+    position: absolute;
+    top: 85%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100px;
+    transform: translate(0px, 5%);
+    opacity: 0;
+    visibility: visible;
+
+    pointer-events: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.3s;
+  }
+
+  &__sub-item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__sub-link {
+    color: #fff;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* === Intro =================================================== */
+
+.intro {
+  position: relative;
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 700px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header__burger {
+    display: block;
+  }
+  .header__nav-wrapper {
+    position: fixed;
+    top: 70px;
+    right: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+  }
+  .menu__list {
+    flex-direction: column;
+  }
+  .header__menu {
+    margin-right: 0;
+  }
+  .menu__item:not(:last-child) {
+    margin-right: 0;
+  }
+  .header__btn {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .menu__sub-ist {
+    display: flex; //none
+  }
+  .nav__visible {
+    transform: none;
+  }
+}
