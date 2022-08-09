@@ -1,18 +1,21 @@
 let burger = document.querySelector('.header__burger')
 let nav = document.querySelector('.header__nav-wrapper')
 const menuItems = nav.querySelectorAll('a')
+let body = document.body
 
 
 
 burger.addEventListener('click', () => {
     burger.classList.toggle('burger__active');
     nav.classList.toggle('nav__visible');
+    body.classList.toggle('no-scroll')
 })
 
 menuItems.forEach(el => {
     el.addEventListener('click', () => {
         burger.classList.remove('burger__active');
         nav.classList.remove('nav__visible');
+        body.classList.remove('no-scroll')
     })
 })
 

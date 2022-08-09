@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
 	<header class="header">
 		<div class="container">
 			<div class="header__inner">
@@ -21,78 +22,16 @@
 					<nav class="header__menu menu">
 						<ul class="menu__list">
 							<li class="menu__item">
-								<a href="#" class="menu__link">Get Started</a>
-								<ul class="menu__sub-ist">
-									<li class="menu__sub-item">
-										<a href="#" class="menu__sub-link">Раздел 1</a>
-									</li>
-									<li class="menu__sub-item">
-										<a href="#" class="menu__sub-link">Раздел 2</a>
-									</li>
-									<li class="menu__sub-item">
-										<a href="#" class="menu__sub-link">Раздел 3</a>
-									</li>
-									<li class="menu__sub-item">
-										<a href="#" class="menu__sub-link">Раздел 4</a>
-									</li>
-								</ul>
+								<a href="#1" class="menu__link">Get Started</a>
 							</li>
-
-
 							<li class="menu__item">
-								<a href="#" class="menu__link">How It Works</a>
-								<ul class="menu__sub-ist">
-									<li class="menu__sub-item">
-										<a href="#" class="menu__sub-link">Раздел 1</a>
-									</li>
-									<li class="menu__sub-item">
-										<a href="#" class="menu__sub-link">Раздел 2</a>
-									</li>
-									<li class="menu__sub-item">
-										<a href="#" class="menu__sub-link">Раздел 3</a>
-									</li>
-									<li class="menu__sub-item">
-										<a href="#" class="menu__sub-link">Раздел 4</a>
-									</li>
-								</ul>
+								<a href="#2" class="menu__link">How It Works</a>
 							</li>
-
-
 							<li class="menu__item">
 								<a href="#" class="menu__link">For Providers</a>
-								<ul class="menu__sub-ist">
-									<li class="menu__sub-item">
-										<a href="#" class="menu__sub-link">Раздел 1</a>
-									</li>
-									<li class="menu__sub-item">
-										<a href="#" class="menu__sub-link">Раздел 2</a>
-									</li>
-									<li class="menu__sub-item">
-										<a href="#" class="menu__sub-link">Раздел 3</a>
-									</li>
-									<li class="menu__sub-item">
-										<a href="#" class="menu__sub-link">Раздел 4</a>
-									</li>
-								</ul>
 							</li>
-
-
 							<li class="menu__item">
 								<a href="#" class="menu__link">About Alma</a>
-								<ul class="menu__sub-ist">
-									<li class="menu__sub-item">
-										<a href="#" class="menu__sub-link">Раздел 1</a>
-									</li>
-									<li class="menu__sub-item">
-										<a href="#" class="menu__sub-link">Раздел 2</a>
-									</li>
-									<li class="menu__sub-item">
-										<a href="#" class="menu__sub-link">Раздел 3</a>
-									</li>
-									<li class="menu__sub-item">
-										<a href="#" class="menu__sub-link">Раздел 4</a>
-									</li>
-								</ul>
 							</li>
 						</ul>
 					</nav>
@@ -204,7 +143,7 @@
 		</div>
 	</section>
 
-	<div class="team">
+	<div class="team" id="1">
 		<div class="container">
 			<div class="team__inner">
 				<div class="team__img-cont">
@@ -241,7 +180,7 @@
 		</div>
 	</div>
 
-	<div class="quote">
+	<div class="quote " id="2">
 		<div class="container">
 			<div class="quote__inner">
 				<div class="quote__wrapper">
@@ -256,6 +195,70 @@
 			</div>
 		</div>
 	</div>
+
+	<section class="provider">
+		<div class="container">
+			<div class="provider__inner">
+				<div class="provider__img-cont">
+					<img class="provider__img" src="./img/provider.png" alt="provider-img">
+				</div>
+				<form action="" class="provider__form">
+					<h3 class="provider__title">Find a licensed provider in your state.</h3>
+					<div class="provider__text">Currently available in New York, New Jersey, Connecticut, and
+						Massachusetts. Sign up here to be the first to know when Alma comes to your state!</div>
+					<div class="provider__select-wrapper">
+						<select class="provider__select" name="select-category" id="">
+							<option value="1">Bee Line</option>
+							<option value="2">Rostelecom</option>
+							<option value="3">MTS</option>
+						</select>
+					</div>
+
+					<button class="provider__btn">See providers</button>
+				</form>
+
+			</div>
+		</div>
+	</section>
+
+
+	<section class="contacts">
+		<div class="container">
+			<div class="contacts__inner">
+				<div class="contacts__top">
+					<div class="contacts__text">Stay In Touch</div>
+					<h4 class="contacts__title">We're growing soon!</h4>
+					<div class="contacts__sub-title">Sign up to be the first to know when Alma comes to you.</div>
+				</div>
+				<form class="contacts__form form" action="">
+					<div class="form__row-1">
+						<div class="form__first-name form-cont">
+							<p class="form__label">First Name</p>
+							<input class="form__input" type="text">
+						</div>
+						<div class="form__last-name form-cont">
+							<p class="form__label">Last Name</p>
+							<input class="form__input" type="text">
+						</div>
+					</div>
+					<div class="form__row-2">
+						<div class="form__first-name form-cont">
+							<p class="form__label">Email Address</p>
+							<input class="form__input" type="email">
+						</div>
+						<div class="form__last-name form-cont">
+							<p class="form__label">phone</p>
+							<input class="form__input" type="tel">
+						</div>
+					</div>
+					<button class="form__btn" type="submit">Stay in Touch</button>
+					<div class="form__subscribing">
+						By subscribing to emails from Alma, you are agreeing to Alma's <a href="#">privacy policy.</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
 
 
 	<script src="js/script.js"></script>
